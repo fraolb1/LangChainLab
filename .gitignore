@@ -83,3 +83,4 @@ dmypy.json
 .pytype/
 
 # C
+chroma_langchain_db/
