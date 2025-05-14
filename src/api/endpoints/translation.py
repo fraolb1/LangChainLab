@@ -25,6 +25,7 @@ def multiply(a: int, b: int) -> int:
     return a * b
 model_with_tool = model.bind_tools([multiply])
 
+
 messages = [
   SystemMessage("Do What every the user asked you."),
   HumanMessage('what is 2 times 3.'),
