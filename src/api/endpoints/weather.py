@@ -47,6 +47,8 @@ def get_weather(city: str = "paris"):
     response = model_With_tool.invoke(messages)
 
     tool_calls = response.tool_calls
+    
+    messages.append(AIMessage(content=response.content, id=response.id, tool_calls=tool_calls)) 
 
     tool_responses = []
     for tool_call in tool_calls:
@@ -60,7 +62,7 @@ def get_weather(city: str = "paris"):
             ToolMessage(content=tool_output, tool_call_id=tool_call["id"])
         )
 
-    messages.append(response)  
+    
     messages.extend(tool_responses)
 
     final_res = model_With_tool.invoke(messages)
