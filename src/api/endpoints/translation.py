@@ -27,7 +27,7 @@ model_with_tool = model.bind_tools([multiply])
 
 
 messages = [
-  SystemMessage("Do What every the user asked you."),
+  SystemMessage("You are a mathematician assistant."),
   HumanMessage('what is 2 times 3.'),
   AIMessage('2 times 3 equals 6.'),
   HumanMessage("how come?")
