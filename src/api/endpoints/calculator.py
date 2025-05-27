@@ -40,7 +40,7 @@ def check_if_math(state:State) -> State:
 def calculator(state:State) -> State:
   numbers = state["numbers"]
   total = sum(numbers)
-  return {"question":state["question"], "numbers":numbers,"answer":total, "next":"final"}
+  return {"question": state["question"], "numbers": numbers, "answer": total, "next": "final"}
 
 def final_answer(state:State) -> State:
   if state["answer"]:
