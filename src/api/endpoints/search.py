@@ -24,7 +24,7 @@ embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 vector_store = Chroma(
   collection_name="example_collection",
   embedding_function=embeddings,
-  persist_directory="src/another_chroma"
+  # persist_directory="src/another_chroma"
 )
 
 vector_store.add_documents(documents=all_split)
