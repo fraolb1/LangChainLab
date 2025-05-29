@@ -1,4 +1,5 @@
 # LangChainLab
+
 LangChainLab is a project focused on exploring and building applications using [LangChain](https://github.com/hwchase17/langchain), a framework for developing applications powered by language models.
 
 ## Features
@@ -45,7 +46,10 @@ poetry run uvicorn src.main:app --reload
 langchainlab/
 ├── examples/
 ├── src/
-│   └── main.py
+├── api/
+│   ├── routes.py
+│   └── endpoint/
+│       └── [API endpoint files]
 ├── tests/
 ├── README.md
 ├── pyproject.toml
@@ -64,6 +68,4 @@ This project is licensed under the MIT License.
 
 - [LangChain Documentation](https://python.langchain.com/)
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
-- [Poetry Documentation](https://python-poetry.org/docs/)
-- [OpenAI API](https://platform.openai.com/docs/)
-- [Hugging Face Transformers](https://huggingface.co/docs/transformers/index)
+- [Gemini API Documentation](https://ai.google.dev/docs)
